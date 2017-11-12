@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       	<link rel="stylesheet" href="style.css">
+        <script src='app.js'></script>
+        <title> login </title>
+    </head>
+    <body id ="body">
+        <section class="container">
+            <div class="emailContainer">
+                <img src="https://cdn2.iconfinder.com/data/icons/seo-flat-6/128/39_Email_Marketing-128.png" id="email_img"/>
+                <p class="txt">Welcome to<br><span id="innerTxt">Mail App</span></p>
+            </div>
+            <form id="loginForm" target="_self" action="spinner.html">
+                <div id="input_container">
+                    <input type="text" id="name" placeholder="Enter your name" value required>
+                    <img src="https://cdn4.iconfinder.com/data/icons/mayssam/512/user-24.png" id="name_img">
+                </div>
+                <div id="input_container">
+                    <input type="password" id="password" placeholder="Password" value required>
+                    <img src="https://cdn0.iconfinder.com/data/icons/mayssam/512/open_lock-32.png" id="lock_img">
+                </div>  
+                <input class="button button-block" type="submit" value="Login" onclick="login()">
+                <p class="forgot"><a href="#">Lost your password?</a></p>
+            </form>
+        </section>
+    </body>
+</html>

@@ -1,0 +1,190 @@
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+body {
+  background: #1ab188;
+  margin: 0;
+  padding: 0;
+}
+.container {
+    justify-content: center;
+    display: grid;
+    grid-template-rows:[out-row1]50% [out-row2] 50% [out-row3];
+    align-content: center;
+}
+.emailContainer{
+    grid-row: 1/2;
+    margin-bottom: 5%;
+    display: grid;
+    grid-template-rows: repeat(2, 50%);
+    margin-right: 5%; 
+    justify-items: center;
+}
+#email_img{
+    grid-row: 1/2;
+}
+    
+.txt{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:1rem;
+    text-align: left;
+    grid-row-start: 2;
+}
+#innerTxt{
+    text-align: left;
+    font-weight: bold;
+}
+
+#loginForm {
+    grid-row: 2/3;
+    position: relative;
+    background: #E8E7E7;
+    border-radius: 10px; 
+    text-align: center;
+    justify-self: left;
+}
+#input_container {
+    display:inline-block;
+    position:relative;
+    margin-top:10%;
+    background:#ddd;
+    direction: rtl;
+    width: 60%;
+}
+#name, #password{
+    height:25px;
+    margin:0;
+    width: 100%;
+    text-align: left;
+    padding-right:20%;
+    border-radius: 10px;
+    padding: 5%;
+}
+#name_img, #lock_img {
+    position:absolute;
+    bottom:4px;
+    right:5px;
+    width:20px;
+    height:20px;
+}
+#loginForm:after{
+	bottom: 100%;
+	left: 50%;
+	border: solid transparent;
+	content: " ";
+	position: absolute;
+    border: solid 15px transparent;
+	border-bottom-color: #E8E7E7;
+	margin-left: -30px;
+}
+
+.button {
+  border:0;
+  padding:3%;
+  outline:none;
+  margin-top:5%;
+  border-radius:5px;
+  font-size:1rem;
+  background:#1ab188;
+  color:white;
+}
+
+.button-block {
+    width:60%;
+    text-align:center; 
+}
+
+.forgot {
+  text-align:center; 
+}
+a {
+  font-size:.8rem;
+  color: gray;
+  transition:.5s ease;
+}
+#spinner {
+  margin: 100px auto;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+#cube1, #cube2 {
+  background-color: white;
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-animation: sk-cubemove 1.8s infinite ease-in-out;
+  animation: sk-cubemove 1.8s infinite ease-in-out;
+}
+
+#cube2 {
+  -webkit-animation-delay: -0.9s;
+  animation-delay: -0.9s;
+}
+
+@-webkit-keyframes sk-cubemove {
+  25% { -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5) }
+  50% { -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg) }
+  75% { -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5) }
+  100% { -webkit-transform: rotate(-360deg) }
+}
+
+@keyframes sk-cubemove {
+  25% { 
+    transform: translateX(42px) rotate(-90deg) scale(0.5);
+    -webkit-transform: translateX(42px) rotate(-90deg) scale(0.5);
+  } 50% { 
+    transform: translateX(42px) translateY(42px) rotate(-179deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-179deg);
+  } 50.1% { 
+    transform: translateX(42px) translateY(42px) rotate(-180deg);
+    -webkit-transform: translateX(42px) translateY(42px) rotate(-180deg);
+  } 75% { 
+    transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+    -webkit-transform: translateX(0px) translateY(42px) rotate(-270deg) scale(0.5);
+  } 100% { 
+    transform: rotate(-360deg);
+    -webkit-transform: rotate(-360deg);
+  }
+}
+@media only screen and (min-width: 600px) {
+
+    .container {
+      display: grid;
+      width: 100vw;
+      height: 100vh;
+      grid-template-columns: [out-col1] 30%  [out-col2] 20% [out-col3] 20% [out-col4] 30%;
+      grid-template-rows:[out-row1] 33.3333% [out-row2] 33.3333% [out-row3] 33.3333%;
+      align-content: center;
+    }
+    .emailContainer{
+        grid-column: out-col2/out-col3;
+        grid-row: out-row2/out-row3;
+    }
+    
+    #loginForm{
+        grid-column: out-col3/out-col4;
+        grid-row: out-row2/out-row3;
+        width: 100%;
+    }
+    
+    #loginForm:before{
+    	right: 100%;
+        top: 30%;
+        content: "";
+        position: absolute;
+        left:-30px;
+        border: solid 15px transparent;
+        border-right-color: #E8E7E7;
+    	margin-top: -30px;
+    }
+    #loginForm:after{
+       display:none;   
+    }
+
+}
