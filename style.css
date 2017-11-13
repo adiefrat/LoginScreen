@@ -70,14 +70,14 @@ body {
     height:20px;
 }
 #loginForm:after{
-	bottom: 100%;
-	left: 50%;
-	border: solid transparent;
-	content: " ";
-	position: absolute;
+    bottom: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    position: absolute;
     border: solid 15px transparent;
-	border-bottom-color: #E8E7E7;
-	margin-left: -30px;
+    border-bottom-color: #E8E7E7;
+    margin-left: -30px;
 }
 
 .button {
@@ -155,12 +155,12 @@ a {
 @media only screen and (min-width: 600px) {
 
     .container {
-      display: grid;
-      width: 100vw;
-      height: 100vh;
-      grid-template-columns: [out-col1] 30%  [out-col2] 20% [out-col3] 20% [out-col4] 30%;
-      grid-template-rows:[out-row1] 33.3333% [out-row2] 33.3333% [out-row3] 33.3333%;
-      align-content: center;
+        display: grid;
+        width: 100vw;
+        height: 100vh;
+        grid-template-columns: [out-col1] 30%  [out-col2] 20% [out-col3] 20% [out-col4] 30%;
+        grid-template-rows:[out-row1] 33.3333% [out-row2] 33.3333% [out-row3] 33.3333%;
+        align-content: center;
     }
     .emailContainer{
         grid-column: out-col2/out-col3;
